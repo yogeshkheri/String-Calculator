@@ -13,8 +13,12 @@ public class StringCalculatorTest {
 		assertEquals(1,StringCalculator.add("1"));
 	}
 	@Test
-	public void StringWithOneAndTwoReturnSumValue() {
-		assertEquals(3, StringCalculator.add("1,2"));
+	public void StringWithOneAndTwoReturnSumValue() { // This test Case For Sending 1,2 as String and Return Value is 3
+		assertEquals(3, StringCalculator.add("1,2")); 
+	}
+	@Test
+	public void StringWithMultipleNumberReturnValue() { // This test Case For Sending multiple Number with comma separated and Return Sum of Values 
+		assertEquals(6, StringCalculator.add("1,2,3"));
 	}
 	
 }
