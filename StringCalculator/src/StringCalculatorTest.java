@@ -26,7 +26,20 @@ public class StringCalculatorTest {
 	}
 	@Test
 	public void StringWithDelimiterReturnSumValue() { // This test case for Sending delimiter and Return sum of Values
-		assertEquals(3, StringCalculator.add("//;\n1;2"));
+		assertEquals(6, StringCalculator.add("//;\n1;2;3"));
+	}
+	@Test
+	public void RaiseExceptionStringContainNegitive() {  // This Test Case For Sending Exception If Negative Number is found in string
+		try {
+			StringCalculator.add("1,-2,3");
+			
+		} catch (Exception e) {
+			assertEquals("Negative Not Allowed", e.getMessage());
+		}
+	}
+	@Test
+	public void StringWithMultipleDelimiterReturnSumValue() { // This test case for Sending delimiter and Return sum of Values
+		assertEquals(6, StringCalculator.add("//;;;\n1;;;2;;;3"));
 	}
 	
 }
