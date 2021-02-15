@@ -21,7 +21,12 @@ public class StringCalculatorTest {
 		assertEquals(6, StringCalculator.add("1,2,3"));
 	}
 	@Test
-	public void StringWithDelimiterReturnSumValue() { // This test case for Sending multiple with comma and new lines delimiter and Return Sum of Values
+	public void StringWithMultipleReturnSumValue() { // This test case for Sending multiple with comma and new lines and Return Sum of Values
 		assertEquals(6,StringCalculator.add("1\n2,3"));
 	}
+	@Test
+	public void StringWithDelimiterReturnSumValue() { // This test case for Sending delimiter and Return sum of Values
+		assertEquals(3, StringCalculator.add("//;\n1;2"));
+	}
+	
 }
