@@ -41,7 +41,7 @@ public class StringCalculator {
 		{
 			throw new RuntimeErrorException(null,"Negative Not Allowed");
 		} 
-		return Arrays.stream(tokenIntVale).sum();		
+		return Arrays.stream(tokenIntVale).filter(n -> n<1000).sum();	
 	}
 		
 }

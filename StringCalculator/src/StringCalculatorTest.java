@@ -41,5 +41,8 @@ public class StringCalculatorTest {
 	public void StringWithMultipleDelimiterReturnSumValue() { // This test case for Sending delimiter and Return sum of Values
 		assertEquals(6, StringCalculator.add("//;;;\n1;;;2;;;3"));
 	}
-	
+	@Test
+	public void StringWithGreaterValeReturnSumValue() { // This test case for Sending multiple with comma and new lines with value greater then 1000 and Return Sum of Values
+		assertEquals(6,StringCalculator.add("1\n2,3,1001"));
+	}
 }
