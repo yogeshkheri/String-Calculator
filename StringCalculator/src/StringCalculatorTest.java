@@ -24,10 +24,12 @@ public class StringCalculatorTest {
 	public void StringWithMultipleReturnSumValue() { // This test case for Sending multiple with comma and new lines and Return Sum of Values
 		assertEquals(6,StringCalculator.add("1\n2,3"));
 	}
-	@Test
-	public void StringWithDelimiterReturnSumValue() { // This test case for Sending delimiter and Return sum of Values
-		assertEquals(6, StringCalculator.add("//;\n1;2;3"));
-	}
+
+	
+	  @Test public void StringWithDelimiterReturnSumValue() { // This test case for Sending delimiter and Return sum of Values assertEquals(6,
+	  StringCalculator.add("//;\n1;2;3");
+	  }
+	 
 	@Test
 	public void RaiseExceptionStringContainNegitive() {  // This Test Case For Sending Exception If Negative Number is found in string
 		try {
@@ -37,12 +39,22 @@ public class StringCalculatorTest {
 			assertEquals("Negative Not Allowed", e.getMessage());
 		}
 	}
-	@Test
-	public void StringWithMultipleDelimiterReturnSumValue() { // This test case for Sending delimiter and Return sum of Values
-		assertEquals(6, StringCalculator.add("//;;;\n1;;;2;;;3"));
-	}
+
+	
+	  @Test public void StringWithMultipleDelimiterReturnSumValue() { // This test case for Sending delimiter and Return sum of Values assertEquals(6,
+	  StringCalculator.add("//[;;;]\n1;;;2;;;3"); 
+	  }
+	 
 	@Test
 	public void StringWithGreaterValeReturnSumValue() { // This test case for Sending multiple with comma and new lines with value greater then 1000 and Return Sum of Values
 		assertEquals(6,StringCalculator.add("1\n2,3,1001"));
+	}
+	@Test
+	public void StringWithDiffernetDelimiterReturnSumValue() { // This test case for Sending delimiter and Return sum of Values
+		assertEquals(6, StringCalculator.add("//[;][*]\n1;2*3"));
+	}
+	@Test
+	public void StringWithDiffernetDelimiterWithMultipleReturnSumValue() { // This test case for Sending delimiter with Multiple Delimiter and Return sum of Values
+		assertEquals(6, StringCalculator.add("//[;;][**]\n1;;2**3"));
 	}
 }
