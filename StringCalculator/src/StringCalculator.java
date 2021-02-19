@@ -54,7 +54,7 @@ public class StringCalculator {
 		int[] tokenIntVale = StringValue.mapToInt(Integer::parseInt).toArray();
 		int[] negitiveNumber = Arrays.stream(tokenIntVale).filter(i -> i < 0).toArray();
 		if (negitiveNumber.length > 0) {
-			throw new RuntimeErrorException(null, "Negative Not Allowed");
+			throw new RuntimeErrorException(null, "Negative Not Allowed"+negitiveNumber[0]);
 		}
 		return Arrays.stream(tokenIntVale).filter(n -> n < 1000).sum();
 	}

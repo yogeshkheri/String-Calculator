@@ -36,7 +36,9 @@ public class StringCalculatorTest {
 			StringCalculator.add("1,-2,3");
 			
 		} catch (Exception e) {
-			assertEquals("Negative Not Allowed", e.getMessage());
+			int[] x = new int[1];
+			x[0]=-2;
+			assertEquals("Negative Not Allowed"+x[0], e.getMessage());
 		}
 	}
 
